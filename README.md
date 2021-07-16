@@ -4,16 +4,22 @@
 
 ## 🤖️ 安装
 
+### 方便快捷
+
 1. `fork` 此项目
 2. 通过 `git clone` 克隆 `fork` 后的项目到本地，克隆至 `~` 用户目录下
-3. 授权 `chmod 777 *.sh`
+
+### 精神洁癖
+
+1. 自创一个同名的私有 GitHub 项目，本地存储在 `~` 目录下
+2. 下载本项目代码，重新上传至自己的私有项目
 
 ## 🧾 备份列表 (在 `backup` 文件夹下)
 
 - `formulae.list`: brew 安装的 package 列表，如 `python`, `mysql`
 - `cask.list`: brew 安装的 GUI 程序列表，如 `WeChat`, `Surge`
 - `application.list`: `/Application` 目录下的程序备份列表，用于还原备份后提醒用户还有哪些 App 需要手动安装 (默认不存在)
-- `setapp.list`: Setapp 程序备份列表 (如果你使用 Setapp；默认不存在)
+- `setapp.list`: SetApp 程序备份列表 (如果你使用 SetApp)
 - `not_install_app.list`: 没通过 brew 安装的应用程序列表，可以用于手动 app 安装时参照
 
 P.S. 部分常用程序已写入 `formulae.list` 和 `cask.list`
@@ -34,7 +40,7 @@ P.S. 部分常用程序已写入 `formulae.list` 和 `cask.list`
 
 1. 直接运行 `./brew_my_mac.sh`  脚本进行安装即可
 2. 运行完成后，`not_install_app.list` 会列出需要自行手动安装的 App;
-3. Setapp 用户可以查看 `backup/setapp.list` 获取备份的 setapp 程序列表，自行完成安装
+3. SetApp 用户可以查看 `backup/setapp.list` 获取备份的 SetApp 程序列表，自行完成安装
 
 ### 📦 自动备份程序列表
 ⚠️ 使用前请务必先 `fork` 本项目！并配置好本地的 `Git` 环境
@@ -58,3 +64,7 @@ P.S. 部分常用程序已写入 `formulae.list` 和 `cask.list`
 ### 为什么要更新
 
 由于 `Homebrew` 更新后，`brew cask install` 整合到 `brew install` 中，原项目的旧脚本运行失败
+
+## ☕️ 喝杯咖啡?
+
+ETH 主网: `jsmjsm.eth`
