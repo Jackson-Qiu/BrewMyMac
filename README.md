@@ -1,6 +1,6 @@
 # 🍻 BrewMyMac -- 自动化备份 & 安装 macOS 应用程序
 
-⚠️ 提醒: 自动备份功能使用 GitHub 存储程序列表，使用前建议先 `fork` 本项目
+![BrewMyMac](png/BrewMyMac.png)
 
 ## 🤖️ 安装
 
