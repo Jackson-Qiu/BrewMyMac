@@ -5,7 +5,7 @@
  # @Github       : https://github.com/jsmjsm
  # @Date         : 2021-07-13 15:40:23
  # @LastEditors  : jsmjsm
- # @LastEditTime : 2021-07-13 16:06:17
+ # @LastEditTime : 2021-07-16 18:54:10
  # @FilePath     : /BrewMyMac/brew_mirror.sh
 ###
 
@@ -54,10 +54,9 @@ select_homebrew_mirror (){
 _change_homebrew_default (){
     echo "Changing the homebrew mirror to: Deafult ..."
 
-    cd "$(brew --repository)/Library/Taps/homebrew/homebrew-core"
-    git remote set-url origin https://github.com/Homebrew/homebrew-core.git
-    cd "$(brew --repository)/Library/Taps/homebrew/homebrew-cask"
-    git remote set-url origin https://github.com/Homebrew/homebrew-cask.git
+    git -C "$(brew --repo)" remote set-url origin https://github.com/Homebrew/brew.git
+
+    git -C "$(brew --repo homebrew/core)" remote set-url origin https://github.com/Homebrew/homebrew-core.git
 
     echo "Change Finifh! Run 'brew update' now... "
     brew update
@@ -67,10 +66,9 @@ _change_homebrew_tuna (){
     echo "Changing the homebrew mirror to: Tuna (清华大学 Tuna 源)  ..."
     echo "Reference from  (参考): https://mirror.tuna.tsinghua.edu.cn/help/homebrew/ "
 
-    cd "$(brew --repository)/Library/Taps/homebrew/homebrew-core"
-    git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
-    cd "$(brew --repository)/Library/Taps/homebrew/homebrew-cask"
-    git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git
+    git -C "$(brew --repo)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
+
+    git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
 
     echo "Change Finifh! Run 'brew update' now... "
     brew update
@@ -80,10 +78,9 @@ _change_homebrew_ustc (){
     echo "Changing the homebrew mirror to: USTC (USTC 中科大源)  ..."
     echo "Reference from  (参考): https://lug.ustc.edu.cn/wiki/mirrors/help/brew.git "
 
-    cd "$(brew --repository)/Library/Taps/homebrew/homebrew-core"
-    git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
-    cd "$(brew --repository)/Library/Taps/homebrew/homebrew-cask"
-    git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
+    git -C "$(brew --repo)" remote set-url origin https://mirrors.ustc.edu.cn/brew.git
+
+    git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
 
     echo "Change Finifh! Run 'brew update' now... "
     brew update
