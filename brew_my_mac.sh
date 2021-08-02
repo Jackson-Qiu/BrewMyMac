@@ -169,13 +169,13 @@ show_menu () {
     echo
 
     case $ans in
-        0) cd $WD && cat formulae.list && type=0
+        0) cd $WD && cat $WD/formulae.list && type=0
         ;;
-        1) cd $WD && cat cask.list && type=1
+        1) cd $WD && cat $WD/cask.list && type=1
         ;;
-        2) cd $WD && echo 'formulae: \n' cat formulae.list && echo 'cask.list: \n' && cat cask.list && type=2
+        2) cd $WD && echo "==>formulae: " && cat $WD/formulae.list && echo "==>cask.list: " && cat $WD/cask.list && type=2
         ;;
-        *) cd $WD && cat cask.list && type=0
+        *) cd $WD && cat $WD/cask.list && type=0
         ;;
     esac
 }
@@ -240,11 +240,11 @@ do
     echo
 
     case $type in
-        0)  list_install formulae.list
+        0)  list_install $WD/formulae.list
         ;;
-        1)  list_install cask.list
+        1)  list_install $WD/cask.list
         ;;
-        2)  list_install formulae.list && list_install cask.list
+        2)  list_install $WD/formulae.list && list_install $WD/cask.list
         ;;
         *)  echo "Debug: error list"
         ;;
